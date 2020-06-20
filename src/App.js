@@ -1,26 +1,44 @@
 import React from 'react';
-import logo from './logo.svg';
+import { connect } from 'react-redux';
+import Grid from './Components/Grid';
 import './App.css';
+import { showLoader, hideLoader } from './Components/loader/loader.action';
+import Loader from './Components/loader/loader';
 
-function App() {
+const App = props => {
+  const {
+    showLoaderComponent,
+    hideLoaderComponnent,
+    showLoader = false
+  } = props;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="App">
+        <Grid showLoaderComponent={showLoaderComponent} hideLoaderComponnent={hideLoaderComponnent}/>
+      </div>
+      <Loader showLoader={showLoader} />
+    </>
   );
 }
 
-export default App;
+
+const mapStateToProps = state => {
+  const { loaderReducer: {
+    showLoader = false
+  } = {} } = state;
+  return {
+    showLoader
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    showLoaderComponent: () => dispatch(showLoader()),
+    hideLoaderComponnent: () => dispatch(hideLoader()),
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);
