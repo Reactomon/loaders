@@ -17,7 +17,7 @@ const Loader = ({
                     justifyContent: 'center',
                     left: 0,
                     position: 'fixed',
-                    opacity: 0.8,
+                    opacity: 0.85,
                     top: 0,
                     transition: 'opacity 0.3s linear',
                     width: '100%',
