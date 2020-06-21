@@ -1,5 +1,5 @@
 import React from 'react';
-import loader from './variation1.svg';
+import loader from './variation11.svg';
 import './loader.css';
 
 const Loader = ({
@@ -11,13 +11,13 @@ const Loader = ({
             {showLoader ? (
                 <div style={{
                     alignItems: 'center',
-                    background: '#bbb',
+                    background: '#000',
                     display: 'flex',
                     height: '100vh',
                     justifyContent: 'center',
                     left: 0,
                     position: 'fixed',
-                    opacity: 0.5,
+                    opacity: 0.8,
                     top: 0,
                     transition: 'opacity 0.3s linear',
                     width: '100%',
