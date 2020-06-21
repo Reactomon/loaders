@@ -16,4 +16,5 @@
 		<animate attributeName="r" calcMode="spline" values="0;40" keyTimes="0;1" dur="3" keySplines="0 0.2 0.8 1" begin="0s" repeatCount="indefinite"/>
 		<animate attributeName="opacity" calcMode="spline" values="1;0" keyTimes="0;1" dur="3" keySplines="0.2 0 0.8 1" begin="0s" repeatCount="indefinite"/>
 	</circle>
+    <text x="42" y="55" fill="#fff" font-family="Arial, Helvetica, sans-serif">Loading</text>
 </svg>

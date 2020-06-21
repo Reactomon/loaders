@@ -24,7 +24,7 @@ const Loader = ({
                     zIndex: '9999'
                   }}>
                     <img src={loader} style={{
-                          height: '100px',
+                          height: '150px',
                           zIndex: 99999
                     }}/>
                   </div>
