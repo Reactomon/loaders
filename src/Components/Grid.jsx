@@ -26,7 +26,7 @@ class Grid extends Component {
       setTimeout(() => {
         this.setState({rowData});
         hideLoaderComponnent();
-      }, 50000);
+      }, 100000);
     });
   }
 

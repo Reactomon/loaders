@@ -1,6 +1,7 @@
 import React from 'react';
 import loader from './variation11.svg';
 import './loader.css';
+import './index.css'
 
 const Loader = ({
     showLoader = false
@@ -25,8 +26,11 @@ const Loader = ({
                   }}>
                     <img src={loader} style={{
                           height: '150px',
-                          zIndex: 99999
+                          position: 'absolute'
                     }}/>
+                    <div class="typewriter">
+                        <h1>Loading</h1>
+                    </div>
                   </div>
             ) : null}
         </>
